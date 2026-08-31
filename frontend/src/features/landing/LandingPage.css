@@ -1,0 +1,152 @@
+.landing-page {
+  min-height: 100vh;
+  background-color: #ffffff;
+}
+
+/* header */
+.landing-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px 24px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.landing-brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.landing-logo {
+  width: 26px;
+  height: 26px;
+  background-color: #2563eb;
+  border-radius: 6px;
+}
+
+.landing-header-actions {
+  display: flex;
+  gap: 10px;
+}
+
+/* buttons, shared styles */
+.landing-btn-primary,
+.landing-btn-outline,
+.landing-btn-ghost {
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.landing-btn-primary {
+  background-color: #2563eb;
+  color: white;
+  border: none;
+}
+
+.landing-btn-primary:hover {
+  background-color: #1d4ed8;
+}
+
+.landing-btn-outline {
+  background-color: white;
+  color: #111827;
+  border: 1px solid #d1d5db;
+}
+
+.landing-btn-outline:hover {
+  background-color: #f9fafb;
+}
+
+.landing-btn-ghost {
+  background: none;
+  border: none;
+  color: #374151;
+}
+
+.landing-btn-ghost:hover {
+  color: #111827;
+}
+
+.landing-btn-lg {
+  padding: 12px 22px;
+  font-size: 15px;
+}
+
+/* hero section */
+.landing-main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 80px 24px 60px;
+}
+
+.landing-hero {
+  max-width: 640px;
+}
+
+.landing-hero h1 {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.15;
+  margin: 0 0 20px 0;
+  color: #0f172a;
+}
+
+.landing-hero p {
+  font-size: 17px;
+  color: #6b7280;
+  margin-bottom: 30px;
+}
+
+.landing-hero-actions {
+  display: flex;
+  gap: 12px;
+}
+
+/* feature cards */
+.landing-grid {
+  margin-top: 80px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.landing-card {
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 22px;
+}
+
+.landing-card-icon {
+  font-size: 20px;
+  margin-bottom: 14px;
+}
+
+.landing-card h3 {
+  font-size: 15px;
+  margin: 0 0 6px 0;
+  color: #111827;
+}
+
+.landing-card p {
+  font-size: 13.5px;
+  color: #6b7280;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* footer */
+.landing-footer {
+  border-top: 1px solid #e5e7eb;
+  text-align: center;
+  padding: 24px;
+  font-size: 13px;
+  color: #9ca3af;
+}

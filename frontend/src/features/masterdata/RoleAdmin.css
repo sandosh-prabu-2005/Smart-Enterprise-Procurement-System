@@ -1,0 +1,53 @@
+.roleadmin-page {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 0 16px;
+}
+
+.roleadmin-page h1 {
+  font-size: 26px;
+  margin-bottom: 4px;
+}
+
+.roleadmin-subtext {
+  color: #6b7280;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.roleadmin-table-card {
+  background-color: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.roleadmin-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.roleadmin-table th {
+  text-align: left;
+  padding: 12px 14px;
+  background-color: #f9fafb;
+  border-bottom: 1px solid #e5e7eb;
+  font-weight: 600;
+  color: #374151;
+}
+
+.roleadmin-table td {
+  padding: 12px 14px;
+  border-bottom: 1px solid #f0f1f3;
+}
+
+.roleadmin-checkbox-cell {
+  text-align: center;
+}
+
+.roleadmin-note {
+  margin-top: 14px;
+  font-size: 13px;
+  color: #9ca3af;
+}

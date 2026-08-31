@@ -1,0 +1,163 @@
+/* Request Detail Premium Stylesheet */
+
+.requisition-detail-page {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.detail-header-section {
+  margin-bottom: 24px;
+  border-bottom: 1px solid #e5e7eb;
+  padding-bottom: 20px;
+}
+
+.btn-back-link {
+  background: none;
+  border: none;
+  color: #2563eb;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0;
+}
+
+.btn-back-link:hover {
+  text-decoration: underline;
+}
+
+.detail-title {
+  font-size: 28px;
+  font-weight: 800;
+  color: #111827;
+  margin: 4px 0 2px 0;
+  letter-spacing: -0.025em;
+}
+
+.detail-title-desc {
+  font-size: 15px;
+  color: #4b5563;
+  margin: 0;
+}
+
+/* Two Column Grid */
+.detail-grid {
+  display: grid;
+  grid-template-columns: 1fr 360px;
+  gap: 28px;
+  align-items: flex-start;
+}
+
+@media (max-width: 1024px) {
+  .detail-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.detail-col-main {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.detail-col-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: sticky;
+  top: 84px;
+}
+
+/* Cards */
+.detail-card {
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 24px;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05);
+}
+
+.detail-card h3 {
+  margin: 0 0 18px 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: #374151;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-bottom: 1px solid #f3f4f6;
+  padding-bottom: 8px;
+}
+
+/* Metadata Grids */
+.meta-details-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px 24px;
+}
+
+.meta-field {
+  display: flex;
+  flex-direction: column;
+}
+
+.meta-field.col-span-2 {
+  grid-column: span 2;
+}
+
+.field-lbl {
+  font-size: 11px;
+  color: #9ca3af;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.field-val {
+  font-size: 14px;
+  color: #1f2937;
+  font-weight: 500;
+}
+
+/* Items Table */
+.items-detail-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.items-detail-table th {
+  text-align: left;
+  padding: 10px 12px;
+  border-bottom: 2px solid #e5e7eb;
+  color: #4b5563;
+  font-weight: 600;
+  background-color: #f9fafb;
+}
+
+.items-detail-table td {
+  padding: 12px;
+  border-bottom: 1px solid #f3f4f6;
+  color: #1f2937;
+}
+
+.items-detail-table tfoot td {
+  border-bottom: none;
+  padding-top: 16px;
+}
+
+/* Status chips */
+.status-badge {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 4px 12px;
+  border-radius: 20px;
+  letter-spacing: 0.03em;
+}
+
+.status-pending { background-color: #fef3c7; color: #b45309; }
+.status-pending-approval { background-color: #fffbe6; color: #d97706; border: 1px solid #f59e0b; }
+.status-approved { background-color: #d1fae5; color: #047857; }
+.status-rejected { background-color: #fee2e2; color: #b91c1c; }
+.status-po-generated { background-color: #eff6ff; color: #1d4ed8; }
+.status-partially-received { background-color: #fae8ff; color: #86198f; }
+.status-received { background-color: #ecfdf5; color: #065f46; }

@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@600;700&display=swap');
+
+/* Corporate Design Token Declarations */
+:root {
+  /* Brand Crimson Colors */
+  --primary-color: #B4121B;
+  --primary-hover: #99131A;
+  --primary-light: #FFE8EA;
+  
+  /* Neutral Color Grays */
+  --color-black: #111111;
+  --color-dark-sidebar: #161616;
+  --sidebar-hover: #252525;
+  --sidebar-active: #B4121B;
+  --bg-color: #F6F7FB;
+  --card-bg: #FFFFFF;
+  --border-color: #E7E8EB;
+
+  /* Workflow & Sign-off State colors */
+  --color-approved: #16A34A;
+  --color-pending: #F59E0B;
+  --color-rejected: #DC2626;
+  --color-info: #2563EB;
+  --color-po-generated: #7C3AED;
+  --color-delivered: #0891B2;
+
+  /* Typography Stack Configuration */
+  --font-logo: 'Abolition', 'Arial Narrow', 'Trebuchet MS', sans-serif;
+  --font-heading: 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  /* General Resets */
+  --border-radius-card: 18px;
+  --border-radius-button: 10px;
+  --shadow-soft: 0 4px 18px -4px rgba(0, 0, 0, 0.08), 0 2px 8px -2px rgba(0, 0, 0, 0.04);
+  --shadow-hover: 0 12px 24px -6px rgba(0, 0, 0, 0.12), 0 4px 12px -3px rgba(0, 0, 0, 0.06);
+}
+
+/* Global Resets */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--color-black);
+  font-family: var(--font-body);
+  font-size: 14px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Scrollbar customization */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #d1d5db;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #9ca3af;
+}
+
+/* Typography Hierarchy Styling */
+.logo-title-font {
+  font-family: var(--font-logo);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 800;
+}
+
+h1, .page-title {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 28px;
+  color: var(--color-black);
+  letter-spacing: -0.02em;
+}
+
+h2, .section-title {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 20px;
+  color: var(--color-black);
+  letter-spacing: -0.015em;
+}
+
+h3, .card-title {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 15px;
+  color: var(--color-black);
+}
+
+/* Reusable Enterprise Components */
+
+/* Enterprise Cards styling */
+.zoho-card, .enterprise-card {
+  background: var(--card-bg);
+  border-radius: var(--border-radius-card);
+  box-shadow: var(--shadow-soft);
+  border: 1px solid var(--border-color);
+  padding: 24px;
+  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.zoho-card:hover, .enterprise-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+}
+
+/* Status Badges pills styling */
+.status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  border: 1px solid transparent;
+}
+
+.status-pill.approved {
+  background-color: #ecfdf5;
+  color: var(--color-approved);
+  border-color: #d1fae5;
+}
+
+.status-pill.pending {
+  background-color: #fffbeb;
+  color: var(--color-pending);
+  border-color: #fef3c7;
+}
+
+.status-pill.rejected {
+  background-color: #fef2f2;
+  color: var(--color-rejected);
+  border-color: #fee2e2;
+}
+
+.status-pill.po-generated {
+  background-color: #f5f3ff;
+  color: var(--color-po-generated);
+  border-color: #e0e7ff;
+}
+
+.status-pill.delivered {
+  background-color: #ecfeff;
+  color: var(--color-delivered);
+  border-color: #cffafe;
+}
+
+/* Button System styling */
+.btn-enterprise {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  height: 48px;
+  padding: 0 24px;
+  border-radius: var(--border-radius-button);
+  font-size: 14px;
+  font-weight: 600;
+  font-family: var(--font-body);
+  cursor: pointer;
+  border: none;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  outline: none;
+}
+
+.btn-enterprise:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.btn-enterprise.primary {
+  background-color: var(--primary-color);
+  color: #ffffff;
+}
+
+.btn-enterprise.primary:hover:not(:disabled) {
+  background-color: var(--primary-hover);
+}
+
+.btn-enterprise.secondary {
+  background-color: #ffffff;
+  color: var(--color-black);
+  border: 1px solid var(--border-color);
+}
+
+.btn-enterprise.secondary:hover:not(:disabled) {
+  background-color: var(--bg-color);
+  border-color: #d1d5db;
+}
+
+.btn-enterprise.danger {
+  background-color: #fee2e2;
+  color: var(--color-rejected);
+  border: 1px solid #fca5a5;
+}
+
+.btn-enterprise.danger:hover:not(:disabled) {
+  background-color: #fecaca;
+}

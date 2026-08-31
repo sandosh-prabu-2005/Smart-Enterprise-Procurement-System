@@ -1,0 +1,100 @@
+.cat-page {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 16px;
+}
+
+.cat-page h1 {
+  font-size: 26px;
+  margin-bottom: 4px;
+}
+
+.cat-subtext {
+  color: #6b7280;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.cat-card {
+  background-color: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.cat-card h2 {
+  font-size: 16px;
+  margin-bottom: 14px;
+}
+
+.cat-form-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 12px;
+}
+
+.cat-form-grid label {
+  display: block;
+  font-size: 13px;
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+
+.cat-form-grid input {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.cat-add-btn {
+  margin-top: 16px;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  padding: 9px 16px;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.cat-add-btn:disabled {
+  background-color: #93c5fd;
+  cursor: not-allowed;
+}
+
+.cat-table-card {
+  background-color: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.cat-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.cat-table th {
+  text-align: left;
+  padding: 12px 14px;
+  background-color: #f9fafb;
+  border-bottom: 1px solid #e5e7eb;
+  font-weight: 600;
+  color: #374151;
+}
+
+.cat-table td {
+  padding: 12px 14px;
+  border-bottom: 1px solid #f0f1f3;
+}
+
+.cat-empty {
+  text-align: center;
+  color: #9ca3af;
+  padding: 24px !important;
+}

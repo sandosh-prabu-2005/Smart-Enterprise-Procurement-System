@@ -1,0 +1,200 @@
+/* Spend Reports & Analytics Premium Stylesheet */
+
+.reports-page-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.reports-header {
+  margin-bottom: 24px;
+}
+
+.reports-grid-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* KPI Card */
+.reports-kpi-card {
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05);
+}
+
+.kpi-icon-box {
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+  background-color: #eff6ff;
+  color: #2563eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.kpi-values {
+  display: flex;
+  flex-direction: column;
+}
+
+.kpi-values span {
+  font-size: 12px;
+  color: #9ca3af;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.kpi-values strong {
+  font-size: 24px;
+  color: #111827;
+}
+
+/* Charts Grid */
+.reports-charts-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .reports-charts-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+.reports-chart-card {
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 24px;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05);
+}
+
+.chart-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #f3f4f6;
+  padding-bottom: 10px;
+}
+
+.chart-card-header h3 {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 600;
+  color: #374151;
+}
+
+.btn-export-excel {
+  background-color: #ffffff;
+  border: 1px solid #d1d5db;
+  color: #374151;
+  padding: 5px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.btn-export-excel:hover {
+  background-color: #f9fafb;
+  border-color: #c7d2fe;
+  color: #2563eb;
+}
+
+.chart-container {
+  min-height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.empty-chart-msg {
+  font-size: 13px;
+  color: #9ca3af;
+  font-style: italic;
+}
+
+.svg-chart-wrapper {
+  width: 100%;
+}
+
+/* Table Cards */
+.reports-table-card {
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 24px;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05);
+}
+
+.table-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+  border-bottom: 1px solid #f3f4f6;
+  padding-bottom: 10px;
+}
+
+.table-card-header h3 {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 600;
+  color: #374151;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+}
+
+.table-wrapper table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+  text-align: left;
+}
+
+.table-wrapper th {
+  padding: 10px 12px;
+  border-bottom: 2px solid #e5e7eb;
+  color: #4b5563;
+  font-weight: 600;
+}
+
+.table-wrapper td {
+  padding: 12px;
+  border-bottom: 1px solid #f3f4f6;
+  color: #1f2937;
+}
+
+/* Audit Log badges */
+.module-badge {
+  background-color: #eff6ff;
+  color: #2563eb;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.action-badge {
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.action-badge.action-login { background-color: #ecfdf5; color: #047857; }
+.action-badge.action-logout { background-color: #f3f4f6; color: #4b5563; }
+.action-badge.action-create { background-color: #fffbeb; color: #b45309; }
+.action-badge.action-approve { background-color: #ecfdf5; color: #047857; }
+.action-badge.action-reject { background-color: #fef2f2; color: #b91c1c; }

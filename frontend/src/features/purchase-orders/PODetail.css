@@ -1,0 +1,76 @@
+/* Printable Purchase Order stylesheet */
+
+.pod-page-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.pod-invoice-card {
+  background-color: #ffffff;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-card);
+  padding: 40px;
+  box-shadow: var(--shadow-soft);
+}
+
+.pod-invoice-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.pod-company-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.pod-invoice-meta {
+  display: flex;
+  flex-direction: column;
+}
+
+.pod-invoice-table-section th {
+  padding: 12px;
+  background-color: var(--bg-color);
+  border-bottom: 2px solid var(--border-color);
+  color: #4b5563;
+}
+
+.pod-invoice-table-section td {
+  padding: 12px;
+  border-bottom: 1px solid #f3f4f6;
+  color: var(--color-black);
+}
+
+/* Printing styles */
+@media print {
+  body {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+  }
+  
+  .no-print {
+    display: none !important;
+  }
+  
+  .printable-area {
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    width: 100% !important;
+  }
+  
+  .enterprise-sidebar,
+  .enterprise-topnav-header {
+    display: none !important;
+  }
+  
+  .enterprise-main-wrapper {
+    margin-left: 0 !important;
+  }
+  
+  .enterprise-workspace-canvas {
+    padding: 0 !important;
+  }
+}

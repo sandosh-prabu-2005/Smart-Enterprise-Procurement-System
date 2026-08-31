@@ -1,0 +1,235 @@
+/* Enterprise Dashboard Layout Stylesheet */
+
+.dash-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.dash-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.dash-header h1 {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--color-black);
+  margin: 0 0 6px 0;
+}
+
+.dash-header p {
+  color: #6b7280;
+  font-size: 14px;
+  margin: 0;
+}
+
+/* Stats Grid & Cards */
+.dash-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.dash-stat-card {
+  background-color: var(--card-bg);
+  border-radius: var(--border-radius-card);
+  padding: 24px;
+  box-shadow: var(--shadow-soft);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  border-top: 5px solid #bdc1c6;
+  border-left: none !important;
+  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.dash-stat-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+}
+
+/* Card border states */
+.dash-stat-card.border-draft { border-top-color: var(--color-info); }
+.dash-stat-card.border-pending { border-top-color: var(--color-pending); }
+.dash-stat-card.border-approved { border-top-color: var(--color-approved); }
+.dash-stat-card.border-rejected { border-top-color: var(--color-rejected); }
+
+.dash-stat-card span {
+  font-size: 11px;
+  color: #9ca3af;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+.dash-stat-card strong {
+  font-size: 32px;
+  color: var(--color-black);
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.dash-stat-card .trend-text {
+  font-size: 12px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.trend-up { color: var(--color-approved); }
+.trend-down { color: var(--color-rejected); }
+
+/* Table Cards */
+.dash-table-card {
+  background-color: var(--card-bg);
+  border-radius: var(--border-radius-card);
+  padding: 32px;
+  box-shadow: var(--shadow-soft);
+  border: 1px solid var(--border-color);
+  margin-bottom: 32px;
+}
+
+.dash-table-card h2 {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0 0 20px 0;
+  color: var(--color-black);
+}
+
+/* Table layout resets */
+.dash-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13.5px;
+}
+
+.dash-table th {
+  text-align: left;
+  padding: 12px;
+  font-weight: 600;
+  color: #4b5563;
+  border-bottom: 2px solid var(--border-color);
+}
+
+.dash-table td {
+  padding: 12px;
+  border-bottom: 1px solid #f3f4f6;
+  color: #374151;
+}
+
+.dash-table tr:hover td {
+  background-color: var(--bg-color);
+}
+
+.dash-table tr:last-child td {
+  border-bottom: none;
+}
+
+/* Two column dashboards layout */
+.dash-two-columns {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 28px;
+}
+
+@media (max-width: 1024px) {
+  .dash-two-columns {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Audit logs list */
+.audit-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.audit-item {
+  padding: 14px;
+  border-radius: 8px;
+  background-color: var(--bg-color);
+  border: 1px solid var(--border-color);
+}
+
+.audit-meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  color: #6b7280;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+.audit-time {
+  font-family: monospace;
+}
+
+.audit-desc {
+  margin: 0;
+  font-size: 13px;
+  color: var(--color-black);
+}
+
+.audit-module {
+  color: var(--primary-color);
+  font-weight: 700;
+}
+
+/* Cost center budgets list */
+.cc-progress-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.cc-progress-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.cc-progress-info {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  color: var(--color-black);
+  font-weight: 600;
+}
+
+.cc-progress-bar-container {
+  background-color: var(--border-color);
+  height: 8px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.cc-progress-bar-fill {
+  height: 100%;
+  border-radius: 4px;
+  background-color: var(--primary-color);
+  transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Loader & message states */
+.dash-loading {
+  padding: 48px;
+  font-size: 14px;
+  text-align: center;
+  color: #6b7280;
+}
+
+.dash-error-container {
+  padding: 48px;
+  text-align: center;
+}
+
+.dash-error {
+  color: var(--color-rejected);
+  font-weight: 600;
+  margin-bottom: 16px;
+}

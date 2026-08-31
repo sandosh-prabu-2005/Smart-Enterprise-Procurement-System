@@ -1,0 +1,83 @@
+.po-page {
+  max-width: 960px;
+  margin: 40px auto;
+  padding: 0 16px;
+}
+
+.po-page h1 {
+  font-size: 26px;
+  margin-bottom: 4px;
+}
+
+.po-subtext {
+  color: #6b7280;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.po-table-card {
+  background-color: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.po-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.po-table th {
+  text-align: left;
+  padding: 12px 14px;
+  background-color: #f9fafb;
+  border-bottom: 1px solid #e5e7eb;
+  font-weight: 600;
+  color: #374151;
+}
+
+.po-table td {
+  padding: 12px 14px;
+  border-bottom: 1px solid #f0f1f3;
+}
+
+.po-table tr:last-child td {
+  border-bottom: none;
+}
+
+.po-stage-badge {
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.stage-created {
+  background-color: #e5e7eb;
+  color: #374151;
+}
+
+.stage-sent-to-vendor {
+  background-color: #dbeafe;
+  color: #1e40af;
+}
+
+.stage-partially-delivered {
+  background-color: #fef3c7;
+  color: #92400e;
+}
+
+.stage-fully-delivered {
+  background-color: #d1fae5;
+  color: #065f46;
+}
+
+.po-clickable-row {
+  cursor: pointer;
+}
+
+.po-clickable-row:hover {
+  background-color: #f9fafb;
+}
